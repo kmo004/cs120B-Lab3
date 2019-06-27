@@ -25,14 +25,14 @@ int main(void){
 	temp = PINA;
 	for(unsigned char i = 0; i < 0x08; i++){
 		temp = temp >> i;
-		if(temp && mask == 0x01){
+		if(temp & mask == 0x01){
 			numTotalA++;
 		}
 	}
 	temp = PINB
 	for(unsigned char j = 0; j < 0x08; j++){
 		temp = temp >> j;
-		if(temp && mask == 0x01){
+		if(temp & mask == 0x01){
 			numTotalB++;
 		}
 	}
