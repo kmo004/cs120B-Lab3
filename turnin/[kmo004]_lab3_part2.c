@@ -17,9 +17,11 @@ int main(void){
 	DDRC = 0xFF; PORTC = 0x00;
 	
 	unsigned char gage = 0x00;
+	/*
 	unsigned char ignitionMask = 0x10;
 	unsigned char seatedMask = 0x20;
 	unsigned char sbYesMask = 0x40;
+	* */
 	while(1){
 	
 	if((PINA & 0x00) == 0x00){
@@ -70,6 +72,7 @@ int main(void){
 	if((PINA & 0x0F) == 0x0F){
 		gage = 0x3F;
 	}
+	/*
 	if((PINA & ignitionMask) == 0x10){
 		if((PINA & seatedMask) == 0x20){
 			if((PINA & sbYesMask) != 0x40){
@@ -77,6 +80,7 @@ int main(void){
       }
     }
   }
+  * */
 	PORTC = gage; 
 	gage = 0;
 	}	

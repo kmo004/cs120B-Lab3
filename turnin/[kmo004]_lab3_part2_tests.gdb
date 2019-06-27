@@ -52,11 +52,6 @@ expectPORTC 0x3F
 checkResult
 
 
-test “PINA: 0x30,=> PORTC: 0xc0
-setPINA 0x30
-continue 2
-expectPORTC 0xc0
-checkResult
 
 
 
